@@ -13,7 +13,9 @@ function App() {
      <Navbar/>
      <Header/>
      <SearchBar/>
-     <JobCard/>
+     {JobDummyData.map((job)=> (
+        <JobCard key={job.id} {...job}/>
+      ))}
     </div>
     </>
   )
